@@ -714,7 +714,7 @@ namespace FluentAssertions.Collections
                 .ForCondition(!(Subject is null))
                 .FailWith("but collection is <null>.")
                 .Then
-                .ForCondition(Subject.Any())
+                .ForCondition(!Subject.Any())
                 .FailWith("but collection is empty.")
                 .Then
                 .ClearExpectation();
